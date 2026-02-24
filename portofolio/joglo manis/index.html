@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title>Joglo Manis Ponorogo | Restoran Jawa Klasik & Legendaris</title>
+  <meta name="description"
+    content="Nikmati kuliner khas Jawa di Rumah Makan Joglo Manis Ponorogo. Menu tradisional, ramah keluarga, halal, lesehan & meja kursi, lengkap dengan fasilitas kolam ikan, mushola, dan parkir luas.">
+  <meta name="keywords"
+    content="Rumah Makan Joglo Manis, Ponorogo, Restoran Jawa, Kuliner Halal, Menu Tradisional, Sop Buntut, Iga Bakar, Beef Steak, Minuman Segar, Dessert, Snack">
+  <meta name="author" content="Joglo Manis">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ=="
+    crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/image.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Joglo Manis
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu-filter">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#booking">Book Table</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="" class="user_link">
+              </a>
+              <!-- Cart Icon -->
+              <a class="cart_link" href="#cart-modal" id="cart-icon">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 456.029 456.029"
+                  style="width:30px;height:30px;">
+                  <g>
+                    <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                    <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+       C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                    <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                  </g>
+                </svg>
+              </a>
+              <br>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- MODAL CART -->
+    <div id="cart-modal" style="
+  display:none;
+  position:fixed;
+  top:70px;
+  right:30px;
+  background:#fff;
+  border-radius:10px;
+  padding:20px;
+  width:320px;
+  z-index:9999;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+">
+      <h5 class="mb-3">Keranjang</h5>
+
+      <ul id="cart-items" style="list-style:none;padding-left:0;"></ul>
+
+      <hr>
+
+      <button id="btn-add-more" class="btn btn-secondary btn-sm w-100 mb-2">
+        Tambah Pesanan
+      </button>
+
+      <button id="btn-checkout" class="btn btn-success btn-sm w-100">
+        Pesan
+      </button>
+      <button id="close-cart" class="btn btn-outline-secondary btn-sm w-100 mt-2">
+        Tutup
+      </button>
+    </div>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>Rumah Makan Joglo Manis Ponorogo</h1>
+                    <p>
+                      Nikmati sajian kuliner khas Ponorogo, mulai dari nasi liwet, iga bakar, soto ayam, hingga minuman
+                      segar.
+                      Cocok untuk makan keluarga, teman, atau acara khusus.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#booking" class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Menu Spesial Setiap Hari </h1>
+                    <p>
+                      Pilihan menu kami diolah dari bahan berkualitas, menghadirkan rasa autentik dan pengalaman kuliner
+                      yang tak terlupakan.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#booking" class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 col-lg-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Rasakan Sensasi Kuliner Jawa </h1>
+                    <p>
+                      Kunjungi Joglo Manis untuk menikmati masakan lezat, suasana tradisional, dan layanan yang membuat
+                      setiap kunjungan berkesan.
+                    </p>
+                    <div class="btn-box">
+                      <a href="#booking" class="btn1">
+                        Order Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- food section -->
+  <section class="food_section layout_padding-bottom">
+    <div class="container" id="menu-filter">
+      <div class="heading_container heading_center">
+        <h2>Our Menu</h2>
+      </div>
+
+      <ul class="filters_menu">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".makanan">Makanan</li>
+        <li data-filter=".minuman">Minuman</li>
+        <li data-filter=".dissert">Dissert</li>
+        <li data-filter=".snack">Snack</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+
+          <!-- minuman f1 -->
+          <div class="col-sm-6 col-lg-4 all minuman">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/minuman1.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Es Teh</h5>
+                  <p>Es teh manis dibuat dengan gula dapat disesuaikan dengan selera</p>
+                  <div class="options">
+                    <h6>5.000</h6>
+                    <button class="add-to-cart" data-name="Es Teh" data-price="20" data-category="minuman">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- makanan f2 -->
+          <div class="col-sm-6 col-lg-4 all makanan">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/makanan1.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Ayam Goreng kremes</h5>
+                  <p>Ayam goreng renyah dengan kremes gurih yang khas dan lezat.</p>
+                  <div class="options">
+                    <h6>15.000</h6>
+                    <button class="add-to-cart" data-name="Ayam Goreng kremes" data-price="15" data-category="makanan">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- minuman f3 -->
+          <div class="col-sm-6 col-lg-4 all minuman">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/minuman2.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Air Mineral</h5>
+                  <p>Air mineral disediakan untuk pelanggan yang menghindari minuman manis</p>
+                  <div class="options">
+                    <h6>3.000</h6>
+                    <button class="add-to-cart" data-name="Air Mineral" data-price="17" data-category="minuman">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- dissert f4 -->
+          <div class="col-sm-6 col-lg-4 all dissert">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/dissert1.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Ice Cream</h5>
+                  <p>Es krim lembut dengan cita beberapa rasa asli.</p>
+                  <div class="options">
+                    <h6>18.000</h6>
+                    <button class="add-to-cart" data-name="Ice Cream" data-price="18" data-category="dissert">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- snack f5 -->
+          <div class="col-sm-6 col-lg-4 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f5.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Kentang Goreng</h5>
+                  <p>Kentang goreng krispi cocok untuk camilan bersama maupun sendiri</p>
+                  <div class="options">
+                    <h6>7.000</h6>
+                    <button class="add-to-cart" data-name="Kentang Goreng" data-price="10" data-category="snack">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- snack f6 -->
+          <div class="col-sm-6 col-lg-4 all snack">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/kripiktempe.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Kripik Tempe</h5>
+                  <p>Tempe tipis digoreng kering dengan taburan bumbu pedas gurih, cocok untuk cemilan.</p>
+                  <div class="options">
+                    <h6>5.000</h6>
+                    <button class="add-to-cart" data-name="Kripik Tempe" data-price="10" data-category="snack">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- minuman f6 -->
+          <div class="col-sm-6 col-lg-4 all minuman">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/minuman3.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Es Jeruk</h5>
+                  <p>Jeruk peras dingin yang manis dan menyegarkan.</p>
+                  <div class="options">
+                    <h6>5.000</h6>
+                    <button class="add-to-cart" data-name="Es Jeruk" data-price="15" data-category="minuman">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- makanan f7 -->
+          <div class="col-sm-6 col-lg-4 all makanan">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/makanan2.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Soto Ayam Kampung</h5>
+                  <p>Soto ayam dengan kuah kuning, dilengkapi bihun, telur, dan taburan bawang goreng.</p>
+                  <div class="options">
+                    <h6>12.000</h6>
+                    <button class="add-to-cart" data-name="Soto Ayam Kampung" data-price="12" data-category="makanan">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- makanan f8 -->
+          <div class="col-sm-6 col-lg-4 all makanan">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/makanan3.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Ayam Bakar</h5>
+                  <p>Ayam bakar asam manis dengan bumbu pedas bisa diantur sesuai selera</p>
+                  <div class="options">
+                    <h6>14.000</h6>
+                    <button class="add-to-cart" data-name="Ayam Bakar" data-price="14" data-category="makanan">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- dissert f9 -->
+          <div class="col-sm-6 col-lg-4 all dissert">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/dissert2.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>Pisang Coklat</h5>
+                  <p>isang goreng panas yang disiram coklat leleh, cocok untuk pencuci mulut.</p>
+                  <div class="options">
+                    <h6>10.000</h6>
+                    <button class="add-to-cart" data-name="Pisang Coklat" data-price="10" data-category="dissert">
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="btn-box">
+        <a href="">View More</a>
+      </div>
+    </div>
+  </section>
+  <!-- end food section -->
+
+  <section class="gallery_section layout_padding" id="service">
+    <div class="container">
+
+      <div class="heading_container heading_center mb-4">
+        <h2>Our Space</h2>
+        <p>Fasilitas & area yang tersedia</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card">
+          <img src="https://www.bwcfla.com/hubfs/images/blog-images/conference-room-setup-best-practices.jpg">
+          <div class="gallery-info">
+            <h5>Meeting Room</h5>
+            <p>Ruang meeting nyaman & profesional</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.6ShVW_zel5vL4Q-MRo5wngHaEK?pid=Api&P=0&h=180">
+          <div class="gallery-info">
+            <h5>Dine In Area</h5>
+            <p>Area makan estetik & cozy</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.0EUqTjkqb28zH9dCFKirHQHaE5?pid=Api&P=0&h=180">
+          <div class="gallery-info">
+            <h5>Area Parkir</h5>
+            <p>Luas, aman, dan mudah diakses</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- book section -->
+  <section class="book_section layout_padding" id="booking">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form id="booking-form">
+              <div>
+                <input type="text" id="cust-name" class="form-control" placeholder="Your Name" required />
+              </div>
+              <div>
+                <input type="text" id="cust-phone" class="form-control" placeholder="Phone Number" required />
+              </div>
+              <div>
+                <input type="email" id="cust-email" class="form-control" placeholder="Your Email" />
+              </div>
+              <div>
+                <input type="text" id="cust-person" class="form-control" placeholder="Jumlah Orang" />
+              </div>
+              <div>
+                <input type="date" id="cust-date" class="form-control">
+              </div>
+              <div class="btn_box">
+                <button type="submit">
+                  Book Now
+                </button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container" id="customer-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.252881545223!2d111.47256287432374!3d-7.868585078232814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79a02a7696b555%3A0x1d5d614a814907bb!2sJoglo%20Manis!5e0!3m2!1sid!2sid!4v1769918336605!5m2!1sid!2sid"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe> style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contact Us
+            </h4>
+            <div class="contact_link_box">
+              <a href=#customer-map>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="https://wa.me/6285850513486">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Wa : 6285850513486 </span>
+              </a>
+              <!-- <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="" class="footer-logo">
+              Rumah Makan Joglo Manis Ponorogo
+            </a>
+            <p>
+              Nikmati sajian kuliner khas Ponorogo. Pilihan menu kami diolah dari bahan berkualitas, menghadirkan rasa autentik dan pengalaman kuliner yang tak terlupakan.
+            </p>
+
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Opening Hours
+          </h4>
+          <p>
+            Everyday
+          </p>
+          <p>
+            10.00 Am -10.00 Pm
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights
+          <a href="https://html.design/">Rumah Makan Joglo Manis Ponorogo</a><br>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script> -->
+  <!-- End Google Map -->
+
+  <!-- Menu -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const header = document.querySelector(".header_section");
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      /* =========================
+         HEADER CHANGE ON SCROLL
+      ========================== */
+      window.addEventListener("scroll", () => {
+        if (!header) return;
+        header.classList.toggle("scrolled", window.scrollY > 50);
+      });
+
+      /* =========================
+         SMOOTH SCROLL MENU
+      ========================== */
+      document.querySelectorAll('a.scroll-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+
+          // pastiin anchor (#section)
+          if (!targetId || !targetId.startsWith("#")) return;
+
+          const target = document.querySelector(targetId);
+          if (!target) return;
+
+          e.preventDefault();
+
+          const offsetPosition =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            headerHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      let cart = [];
+
+      const cartList = document.getElementById("cart-items");
+      const cartModal = document.getElementById("cart-modal");
+      const cartIcon = document.getElementById("cart-icon");
+
+      // ================= OPEN CART ICON =================
+      cartIcon.addEventListener("click", function (e) {
+        e.preventDefault();
+        cartModal.style.display = "block";
+        renderCart();
+      });
+
+      // ================= ADD TO CART =================
+      document.querySelectorAll(".add-to-cart").forEach(btn => {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          cartModal.style.display = "block";
+
+          const name = this.dataset.name;
+          const price = this.dataset.price;
+          const category = this.dataset.category;
+
+          const existing = cart.find(
+            item => item.name === name && item.category === category
+          );
+
+          if (existing) {
+            existing.qty++;
+          } else {
+            cart.push({ name, price, category, qty: 1 });
+          }
+
+          renderCart();
+        });
+      });
+
+      // ================= RENDER CART =================
+      function renderCart() {
+        cartList.innerHTML = "";
+
+        if (cart.length === 0) {
+          cartList.innerHTML = "<li>Keranjang kosong</li>";
+          return;
+        }
+
+        cart.forEach((item, index) => {
+          cartList.innerHTML += `
+        <li style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+          <div>
+            <strong>${item.name}</strong><br>
+            <small>${item.category}</small>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:6px;">
+            <button class="btn btn-sm btn-outline-secondary" onclick="decreaseQty(${index})">−</button>
+            <span>${item.qty}</span>
+            <button class="btn btn-sm btn-outline-secondary" onclick="increaseQty(${index})">+</button>
+          </div>
+        </li>
+      `;
+        });
+      }
+
+      // ================= QTY =================
+      window.increaseQty = function (index) {
+        cart[index].qty++;
+        renderCart();
+      };
+
+      window.decreaseQty = function (index) {
+        cart[index].qty--;
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+        renderCart();
+      };
+
+      // ================= MODAL BUTTON =================
+      document.getElementById("close-cart").onclick = () => {
+        cartModal.style.display = "none";
+      };
+
+      document.getElementById("btn-add-more").onclick = () => {
+        cartModal.style.display = "none";
+        document.getElementById("menu-filter")
+          .scrollIntoView({ behavior: "smooth" });
+      };
+
+      document.getElementById("btn-checkout").onclick = () => {
+        document.getElementById("booking")
+          .scrollIntoView({ behavior: "smooth" });
+      };
+
+      // ================= FORM → WA =================
+      document.getElementById("booking-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("cust-name").value || "-";
+        const phone = document.getElementById("cust-phone").value || "-";
+        const email = document.getElementById("cust-email").value || "-";
+        const person = document.getElementById("cust-person").value || "-";
+        const date = document.getElementById("cust-date").value || "-";
+
+        if (cart.length === 0) {
+          const lanjut = confirm(
+            "Keranjang masih kosong.\nApakah Anda ingin lanjut konsultasi via WhatsApp?"
+          );
+
+          if (lanjut) {
+            let msg = `Halo Joglo Manis Ponorogo\n\n`;
+            msg += `Saya ingin konsultasi / tanya menu.\n\n`;
+            msg += `Nama: ${name}\n`;
+            msg += `No HP: ${phone}\n`;
+            msg += `Jumlah Orang: ${person}\n`;
+            msg += `Tanggal: ${date}\n\nPesanan:\n`;
+
+            const waUrl = `https://wa.me/6285850513486?text=${encodeURIComponent(msg)}`;
+            window.open(waUrl, "_blank");
+          }
+          return; // STOP submit form
+        }
+
+        // Jika ada cart
+        let msg = `Halo Joglo Manis Ponorogo \n\nReservasi & Pesanan\n`;
+        msg += `Nama: ${name}\n`;
+        msg += `No HP: ${phone}\n`;
+        msg += `Email: ${email}\n`;
+        msg += `Jumlah Orang: ${person}\n`;
+        msg += `Tanggal: ${date}\n\nPesanan:\n`;
+
+        const grouped = {};
+        cart.forEach(i => {
+          if (!grouped[i.category]) grouped[i.category] = [];
+          grouped[i.category].push(i);
+        });
+
+        for (const cat in grouped) {
+          msg += `\n${cat.toUpperCase()}\n`;
+          grouped[cat].forEach((i, n) => {
+            msg += `${n + 1}. ${i.name} (${i.qty} item)\n`;
+          });
+        }
+
+        window.open(
+          `https://wa.me/6285850513486?text=${encodeURIComponent(msg)}`,
+          "_blank"
+        );
+      });
+    });
+
+    const name = document.getElementById("cust-name").value;
+    const phone = document.getElementById("cust-phone").value;
+    const email = document.getElementById("cust-email").value || "-";
+    const person = document.getElementById("cust-person").value;
+    const date = document.getElementById("cust-date").value;
+
+    msg += `Nama: ${name}\n`;
+    msg += `No HP: ${phone}\n`;
+    msg += `Email: ${email}\n`;
+    msg += `Jumlah Orang: ${person}\n`;
+    msg += `Tanggal: ${date}\n\nPesanan:\n`;
+
+
+  </script>
+
+</body>
+
+</html>

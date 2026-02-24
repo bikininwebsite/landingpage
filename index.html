@@ -1,904 +1,817 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-    <meta charset="utf-8">
-    <title>Bikinin Website</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- SEO -->
+    <title>BikininWebsite | Jasa Pembuatan Website Profesional, Cepat & Terjangkau</title>
+    <meta name="description"
+        content="BikininWebsite adalah jasa pembuatan website profesional untuk UMKM, freelancer, startup, dan personal brand. Website modern, cepat, SEO-friendly, dan siap closing via WhatsApp.">
+    <meta name="keywords"
+        content="jasa pembuatan website, bikin website murah, jasa website UMKM, website bisnis, jasa landing page, jasa website profesional">
+    <meta name="robots" content="index, follow">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new WOW().init();
+        });
+    </script>
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --bg: #0f0f14;
+            --card: #161625;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --hover: #5b21b6;
+        }
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--text);
+            transition: .3s
+        }
+
+        a:hover {
+            color: var(--primary)
+        }
+
+        section {
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 20, .85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, .08);
+            z-index: 999;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            display: inline-block;
+            transition: .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(-25deg);
+            transition: 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 200%;
+        }
+
+        .btn:hover {
+            background: var(--hover);
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(124, 58, 237, .4);
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 18px;
+            padding: 35px;
+            transition: .35s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .5), 0 0 25px rgba(124, 58, 237, .25);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            transition: .3s;
+        }
+
+        .card:hover i {
+            color: #a78bfa;
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .grid {
+            display: grid;
+            gap: 30px
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            background: #0b0b11;
+            color: #fff;
+            transition: .3s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(124, 58, 237, .3);
+        }
+
+        textarea {
+            min-height: 120px
+        }
+
+        .glow {
+            box-shadow: 0 0 30px rgba(124, 58, 237, .45)
+        }
+
+        .wa-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .4);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, .6)
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0)
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0)
+            }
+        }
+
+        footer {
+            background: #0b0b11;
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 60px 20px;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        /* ANIMATED BACKGROUND SHAPES */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.2;
+            animation: float 15s linear infinite;
+        }
+
+        .shape1 {
+            width: 120px;
+            height: 120px;
+            background: #7c3aed;
+            top: 10%;
+            left: 5%;
+        }
+
+        .shape2 {
+            width: 80px;
+            height: 80px;
+            background: #a78bfa;
+            top: 30%;
+            right: 10%;
+        }
+
+        .shape3 {
+            width: 100px;
+            height: 100px;
+            background: #5b21b6;
+            bottom: 15%;
+            left: 15%;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        /* ============================= */
+        /* ===== PORTFOLIO FIX FINAL ==== */
+        /* ============================= */
+
+        .portfolio-card {
+            background: var(--card);
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .08);
+            transition: .3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, .4);
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* ===== SLIDER ===== */
+
+        /* SLIDER FIX CLEAN */
+
+        .slider {
+            height: 380px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        /* MATIKAN SEMUA EFEK ZOOM */
+        .portfolio-card:hover img {
+            transform: none !important;
+        }
+
+        /* ==== PORTFOLIO PREMIUM ==== */
+
+        .portfolio-card {
+            background: #111827;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: 0.3s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Slider */
+        .slider {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.8s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            flex: 0 0 100%;
+            object-fit: cover;
+        }
+
+        /* Content */
+        .portfolio-content {
+            padding: 25px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(167, 139, 250, 0.15);
+            color: #a78bfa;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-content h3 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .portfolio-content p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            margin-top: 15px;
+        }
+
+        .tech-stack span {
+            display: inline-block;
+            background: #1f2937;
+            color: #9ca3af;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 8px;
+            margin-right: 6px;
+            margin-top: 6px;
+        }
+
+        /* Button */
+        .btn-primary {
+            display: inline-block;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #7c3aed, #a78bfa);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.85;
+        }
+    </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner"
-            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+<body>
+
+    <header>
+        <div class="container">
+            <div style="font-size:22px;font-weight:800">
+                Bikinin<span style="color:var(--primary)">Website</span>
             </div>
-        </div>
-        <!-- Spinner End -->
-
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0" id="home">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="m-0">Bikinin Website</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto py-0">
-                        <a href="#home" class="nav-item nav-link active">Home</a>
-                        <a href="#about" class="nav-item nav-link">Tentang</a>
-                        <a href="#feature" class="nav-item nav-link">Layanan</a>
-                        <a href="#pricing" class="nav-item nav-link">Harga</a>
-                        <a href="#review" class="nav-item nav-link">Portofolio</a>
-                        <a href="#contact" class="nav-item nav-link">Kontak</a>
-
-                    </div>
-                    <a href="http://wa.me/6285850513486"
-                        class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">
-                        Konsultasi Gratis
-                    </a>
-                </div>
+            <nav style="display:flex;gap:26px;align-items:center">
+                <a href="#home">Home</a>
+                <a href="#services">Layanan</a>
+                <a href="#portfolio">Portofolio</a>
+                <a href="#pricing">Paket</a>
+                <a href="#about">Tentang</a>
+                <a href="#order" class="btn">Order</a>
             </nav>
-
-            <!-- Hero Start -->
-            <div class="container-xxl bg-primary hero-header">
-                <div class="container px-lg-5">
-                    <div class="row g-5 align-items-center">
-
-                        <!-- KIRI: TEKS -->
-                        <div class="col-lg-7 text-center text-lg-start">
-                            <h1 class="text-white mb-4 animated slideInDown">
-                                Jasa Pembuatan Website Profesional<br>
-                                untuk Pribadi & UMKM
-                            </h1>
-                            <p class="hero-desc animated slideInDown">
-                                Kami membantu Anda memiliki website yang rapi, profesional,
-                                cepat diakses untuk kebutuhan bisnis maupun prinadi.
-                                Mulai dari undangan digital, website UMKM, sampai dashboard admin.
-                            </p>
-                            <a href="#pricing"
-                                class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">
-                                Lihat Harga
-                            </a>
-
-                            <a href="https://wa.me/6285850513486"
-                                class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">
-                                Hubungi WhatsApp
-                            </a>
-                        </div>
-
-                        <!-- KANAN: GAMBAR -->
-                        <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
-                            data-wow-delay="0.3s">
-                            <img src="img/image.png" class="img-fluid hero-laptop" alt="Contoh Website Profesional">
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
-            <!-- Hero End -->
-            <!-- About Start -->
-            <div class="container-xxl pt-3 pb-5" id="about">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <h5 class="text-primary-gradient fw-medium">Tentang Kami</h5>
-                            <h1 class="mb-4">BIKININ WEBSITE COMPANY</h1>
-                            <p class="mb-4">
-                                bikininweb adalah layanan pembuatan website yang fokus pada kebutuhan nyata klien.
-                                Kami mengutamakan tampilan rapi, performa ringan, dan kemudahan penggunaan.
-                                Cocok untuk personal branding, UMKM, maupun project custom.
-                            </p>
-                            <div class="row g-4 mb-4">
-                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                    <div class="d-flex">
-                                        <i class="fa fa-cogs fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
-                                        <div class="ms-3">
-                                            <h2 class="mb-0" data-toggle="counter-up">25</h2>
-                                            <p class="text-primary-gradient mb-0">Project</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                    <div class="d-flex">
-                                        <i class="fa fa-comments fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
-                                        <div class="ms-3">
-                                            <h2 class="mb-0" data-toggle="counter-up">10</h2>
-                                            <p class="text-secondary-gradient mb-0">Clients Reviews</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#contact" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">
-                                Konsultasi Sekarang
-                            </a>
-                        </div>
-                        <div class="col-lg-6">
-                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- About End -->
-
-            <!-- Features Start -->
-            <div class="container-xxl py-5" id="feature">
-                <div class="container py-5 px-lg-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Layanan Kami</h5>
-                        <h1 class="mb-5">Solusi Website Sesuai Kebutuhan</h1>
-                    </div>
-                    <div class="row g-4">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-eye text-white fs-4"></i>
-                                </div>
-                                <h5 class="mb-3">Website Pribadi & UMKM</h5>
-                                <p class="m-0">
-                                    Pembuatan website untuk personal branding dan UMKM agar terlihat profesional dan
-                                    terpercaya.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-layer-group text-white fs-4"></i>
-                                </div>
-                                <h5 class="mb-3">Undangan Digital</h5>
-                                <p class="m-0">
-                                    Undangan digital modern, ringan, dan mudah dibagikan melalui WhatsApp atau media
-                                    sosial.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-edit text-white fs-4"></i>
-                                </div>
-                                <h5 class="mb-3">Dashboard Admin</h5>
-                                <p class="m-0">
-                                    Dashboard untuk mengelola data, pesanan, atau laporan sesuai kebutuhan
-                                    bisnis.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-shield-alt text-white fs-4"></i>
-                                </div>
-                                <h5 class="mb-3">Website Aman & Stabil</h5>
-                                <p class="m-0">
-                                    Website dibangun dengan struktur yang aman, cepat diakses, dan mudah dikembangkan.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-cloud text-white fs-4"></i>
-                                </div>
-                                <h5 class="mb-3">Hosting & Domain</h5>
-                                <p class="m-0">
-                                    Bantuan setup hosting dan domain, termasuk rekomendasi sesuai kebutuhan dan
-                                    anggaran.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="feature-item bg-light rounded p-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
-                                    style="width: 60px; height: 60px;">
-                                    <i class="fa fa-mobile-alt text-white fs-4"></i>
-                                </div>
-                                <h5 class="mb-3">Responsive & SEO Ready</h5>
-                                <p class="m-0">
-                                    Tampilan website optimal di semua perangkat dan siap dioptimasi web browser.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Features End -->
-
-
-            <!-- Screenshot Start -->
-            <div class="container-xxl py-5" id="portfolio">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <!-- Text / Portfolio Info -->
-                        <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <h5 class="text-primary-gradient fw-medium">Portofolio</h5>
-                            <h1 class="mb-4">Contoh Website yang Pernah Kami Buat</h1>
-
-                            <p class="mb-4">
-                                Berikut beberapa contoh tampilan website yang kami kerjakan, mulai dari website UMKM,
-                                undangan digital, hingga dashboard sederhana.
-                            </p>
-
-                            <p>
-                                <i class="fa fa-check text-primary-gradient me-3"></i>
-                                Desain modern dan rapi
-                            </p>
-                            <p>
-                                <i class="fa fa-check text-primary-gradient me-3"></i>
-                                Responsif di HP & laptop
-                            </p>
-                            <p class="mb-4">
-                                <i class="fa fa-check text-primary-gradient me-3"></i>
-                                Mudah dikembangkan
-                            </p>
-
-                            <a href="https://wa.me/6285850513486"
-                                class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">
-                                Konsultasi Sekarang
-                            </a>
-                        </div>
-
-                        <!-- Screenshot / Laptop Preview -->
-                        <div class="col-lg-7 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
-                            data-wow-delay="0.3s">
-
-                            <div class="owl-carousel screenshot-carousel">
-                                <img class="img-fluid" src="img/image.png" alt="Website UMKM">
-                                <img class="img-fluid" src="img/image2.png" alt="Website Dashboard">
-                                <img class="img-fluid" src="img/image3.png" alt="Website Undangan">
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- Screenshot End -->
-
-
-            <!-- Process Start -->
-            <!-- <div class="container-xxl py-5">
-                <div class="container py-5 px-lg-5">
-                    <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">How It Works</h5>
-                        <h1 class="mb-5">3 Easy Steps</h1>
-                    </div>
-                    <div class="row gy-5 gx-4 justify-content-center">
-                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
-                                    style="width: 100px; height: 100px;">
-                                    <i class="fa fa-cog fa-3x text-white"></i>
-                                </div>
-                                <h5 class="mt-4 mb-3">Install the App</h5>
-                                <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos
-                                    erat
-                                    ipsum et lorem et sit sed stet</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
-                                    style="width: 100px; height: 100px;">
-                                    <i class="fa fa-address-card fa-3x text-white"></i>
-                                </div>
-                                <h5 class="mt-4 mb-3">Setup Your Profile</h5>
-                                <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos
-                                    erat
-                                    ipsum et lorem et sit sed stet</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
-                                <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
-                                    style="width: 100px; height: 100px;">
-                                    <i class="fa fa-check fa-3x text-white"></i>
-                                </div>
-                                <h5 class="mt-4 mb-3">Enjoy The Features</h5>
-                                <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos
-                                    erat
-                                    ipsum et lorem et sit sed stet</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Process Start -->
-
-            <!-- Download Start -->
-            <!-- <div class="container-xxl py-5">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-5 align-items-center">
-                        <div class="col-lg-6">
-                            <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/about.png">
-                        </div>
-                        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <h5 class="text-primary-gradient fw-medium">Download</h5>
-                            <h1 class="mb-4">Download The Latest Version Of Our App</h1>
-                            <p class="mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore.
-                                Clita
-                                erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna
-                                dolore
-                                erat amet</p>
-                            <div class="row g-4">
-                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
-                                    <a href="" class="d-flex bg-primary-gradient rounded py-3 px-4">
-                                        <i class="fab fa-apple fa-3x text-white flex-shrink-0"></i>
-                                        <div class="ms-3">
-                                            <p class="text-white mb-0">Available On</p>
-                                            <h5 class="text-white mb-0">App Store</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
-                                    <a href="" class="d-flex bg-secondary-gradient rounded py-3 px-4">
-                                        <i class="fab fa-android fa-3x text-white flex-shrink-0"></i>
-                                        <div class="ms-3">
-                                            <p class="text-white mb-0">Available On</p>
-                                            <h5 class="text-white mb-0">Play Store</h5>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Download End -->
-
-
-            <!-- Pricing Start -->
-            <div class="container-xxl py-sm-3" id="pricing">
-                <div class="container py-sm-3 px-lg-5">
-
-                    <!-- Title -->
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Pricing Plan</h5>
-                        <h1 class="mb-5">Pilih Paket Website</h1>
-                    </div>
-
-                    <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
-
-                        <!-- Tabs -->
-                        <ul
-                            class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
-                            <li class="nav-item">
-                                <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">
-                                    Project
-                                </button>
-                            </li>
-                            <li class="nav-item">
-                                <button class="nav-link" data-bs-toggle="pill" href="#tab-2">
-                                    Maintenance
-                                </button>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content text-start">
-
-                            <!-- PROJECT -->
-                            <div id="tab-1" class="tab-pane fade show p-0 active">
-                                <div class="row g-4">
-
-                                    <!-- Starter -->
-                                    <div class="col-lg-4">
-                                        <div class="bg-light rounded">
-                                            <div class="border-bottom p-4 mb-4">
-                                                <h4 class="text-primary-gradient mb-1">Starter</h4>
-                                                <span>Cocok untuk UMKM</span>
-                                            </div>
-                                            <div class="p-4 pt-0">
-                                                <h1 class="mb-3">
-                                                    <span class="text-muted d-block mb-1" style="font-size:14px;">
-                                                        Start From
-                                                    </span>
-                                                    <small class="align-top" style="font-size:22px;">Rp</small>
-                                                    750K
-                                                    <small class="align-bottom" style="font-size:16px;"> /
-                                                        project</small>
-                                                </h1>
-
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Landing Page</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Responsive Design</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Gratis Revisi 2x</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-
-                                                <a href="https://wa.me/6285850513486"
-                                                    class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4"
-                                                    target="_blank">
-                                                    Konsultasi WhatsApp
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Advance -->
-                                    <div class="col-lg-4">
-                                        <div class="bg-light rounded border border-primary">
-                                            <div class="border-bottom p-4 mb-4 text-center">
-                                                <span class="badge bg-primary mb-2">Best Seller</span>
-                                                <h4 class="text-primary-gradient mb-1">Advance</h4>
-                                                <span>Website Profesional</span>
-                                            </div>
-                                            <div class="p-4 pt-0">
-                                                <h1 class="mb-3">
-                                                    <span class="text-muted d-block mb-1" style="font-size:14px;">
-                                                        Start From
-                                                    </span>
-                                                    <small class="align-top" style="font-size:22px;">Rp</small>
-                                                    1.5JT
-                                                    <small class="align-bottom" style="font-size:16px;"> /
-                                                        project</small>
-                                                </h1>
-
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Website Multi Halaman</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>SEO Dasar</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Gratis Revisi 3x</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-
-                                                <a href="https://wa.me/6285850513486"
-                                                    class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4"
-                                                    target="_blank">
-                                                    Konsultasi WhatsApp
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Premium -->
-                                    <div class="col-lg-4">
-                                        <div class="bg-light rounded">
-                                            <div class="border-bottom p-4 mb-4">
-                                                <h4 class="text-primary-gradient mb-1">Premium</h4>
-                                                <span>Full Custom Website</span>
-                                            </div>
-                                            <div class="p-4 pt-0">
-                                                <h1 class="mb-3">
-                                                    <span class="text-muted d-block mb-1" style="font-size:14px;">
-                                                        Start From
-                                                    </span>
-                                                    <small class="align-top" style="font-size:22px;">Rp</small>
-                                                    2.5JT
-                                                    <small class="align-bottom" style="font-size:16px;"> /
-                                                        project</small>
-                                                </h1>
-
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Custom Design</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Admin Dashboard</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-                                                <div class="d-flex justify-content-between mb-3">
-                                                    <span>Gratis Revisi Minor</span>
-                                                    <i class="fa fa-check text-primary-gradient pt-1"></i>
-                                                </div>
-
-                                                <a href="https://wa.me/6285850513486"
-                                                    class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4"
-                                                    target="_blank">
-                                                    Konsultasi WhatsApp
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- MAINTENANCE -->
-                            <div id="tab-2" class="tab-pane fade p-0">
-                                <div class="row g-4">
-
-                                    <div class="col-lg-4">
-                                        <div class="bg-light rounded">
-                                            <div class="border-bottom p-4 mb-4">
-                                                <h4 class="text-primary-gradient mb-1">Starter</h4>
-                                                <span>Maintenance Ringan</span>
-                                            </div>
-                                            <div class="p-4 pt-0">
-                                                <h1 class="mb-3">
-                                                    <span class="text-muted d-block mb-1" style="font-size:14px;">
-                                                        Start From
-                                                    </span>
-                                                    <small class="align-top" style="font-size:22px;">Rp</small>
-                                                    150K
-                                                    <small class="align-bottom" style="font-size:16px;"> / bulan</small>
-                                                </h1>
-                                                <a href="https://wa.me/6285850513486"
-                                                    class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4"
-                                                    target="_blank">
-                                                    Konsultasi WhatsApp
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4">
-                                        <div class="bg-light rounded border">
-                                            <div class="border-bottom p-4 mb-4">
-                                                <h4 class="text-primary-gradient mb-1">Advance</h4>
-                                                <span>Maintenance Berkala</span>
-                                            </div>
-                                            <div class="p-4 pt-0">
-                                                <h1 class="mb-3">
-                                                    <span class="text-muted d-block mb-1" style="font-size:14px;">
-                                                        Start From
-                                                    </span>
-                                                    <small class="align-top" style="font-size:22px;">Rp</small>
-                                                    300K
-                                                    <small class="align-bottom" style="font-size:16px;"> / bulan</small>
-                                                </h1>
-                                                <a href="https://wa.me/6285850513486"
-                                                    class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4"
-                                                    target="_blank">
-                                                    Konsultasi WhatsApp
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4">
-                                        <div class="bg-light rounded">
-                                            <div class="border-bottom p-4 mb-4">
-                                                <h4 class="text-primary-gradient mb-1">Premium</h4>
-                                                <span>Maintenance Full Support</span>
-                                            </div>
-                                            <div class="p-4 pt-0">
-                                                <h1 class="mb-3">
-                                                    <span class="text-muted d-block mb-1" style="font-size:14px;">
-                                                        Start From
-                                                    </span>
-                                                    <small class="align-top" style="font-size:22px;">Rp</small>
-                                                    500K
-                                                    <small class="align-bottom" style="font-size:16px;"> / bulan</small>
-                                                </h1>
-                                                <a href="https://wa.me/6285850513486"
-                                                    class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4"
-                                                    target="_blank">
-                                                    Konsultasi WhatsApp
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Pricing End -->
-
-            <!-- Testimonial Start -->
-            <div class="container-xxl py-5" id="review">
-                <div class="container py-5 px-lg-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Testimonial</h5>
-                        <h1 class="mb-5">Apa Kata Klien Kami</h1>
-                    </div>
-
-                    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-
-                        <!-- Testimonial 1 -->
-                        <div class="testimonial-item rounded p-4">
-                            <div class="d-flex align-items-center mb-4">
-                                <!-- <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg"
-                                    style="width: 85px; height: 85px;"> -->
-                                <div class="ms-4">
-                                    <h5 class="mb-1">Rizky Pratama</h5>
-                                    <p class="mb-1">Owner UMKM Kuliner</p>
-                                    <div>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mb-0">
-                                Website-nya rapi, cepat, dan sesuai banget sama kebutuhan usaha saya.
-                                Proses pengerjaan juga jelas dan komunikatif. Sangat recommended!
-                            </p>
-                        </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="testimonial-item rounded p-4">
-                            <div class="d-flex align-items-center mb-4">
-                                <!-- <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg"
-                                    style="width: 85px; height: 85px;"> -->
-                                <div class="ms-4">
-                                    <h5 class="mb-1">Dinda Ayu</h5>
-                                    <p class="mb-1">Freelancer</p>
-                                    <div>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mb-0">
-                                Saya pesan website portfolio dan hasilnya melebihi ekspektasi.
-                                Desainnya profesional dan mudah diakses dari semua device.
-                            </p>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="testimonial-item rounded p-4">
-                            <div class="d-flex align-items-center mb-4">
-                                <!-- <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg"
-                                    style="width: 85px; height: 85px;"> -->
-                                <div class="ms-4">
-                                    <h5 class="mb-1">Andi Saputra</h5>
-                                    <p class="mb-1">Pengusaha UMKM</p>
-                                    <div>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mb-0">
-                                Tim sangat responsif dan paham teknis. Website bisnis kami sekarang
-                                lebih cepat, aman, dan mudah dikelola.
-                            </p>
-                        </div>
-
-                        <!-- Testimonial 4 -->
-                        <div class="testimonial-item rounded p-4">
-                            <div class="d-flex align-items-center mb-4">
-                                <!-- <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg"
-                                    style="width: 85px; height: 85px;"> -->
-                                <div class="ms-4">
-                                    <h5 class="mb-1">Siti Rahma</h5>
-                                    <p class="mb-1">Admin Sekolah</p>
-                                    <div>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                        <small class="fa fa-star text-warning"></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="mb-0">
-                                Maintenance bulanan sangat membantu. Kalau ada kendala langsung
-                                ditangani dengan cepat dan jelas. Pelayanannya mantap.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- Testimonial End -->
-
-
-            <!-- Contact Start -->
-            <!-- <div class="container-xxl py-5" id="contact">
-                <div class="container py-5 px-lg-5">
-                    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                        <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
-                        <h1 class="mb-5">Get In Touch!</h1>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-9">
-                            <div class="wow fadeInUp" data-wow-delay="0.3s">
-                                <p class="text-center mb-4">The contact form is currently inactive. Get a functional and
-                                    working contact form with Ajax & PHP in a few minutes. Just copy and paste the
-                                    files,
-                                    add a little code and you're done. <a
-                                        href="https://htmlcodex.com/contact-form">Download
-                                        Now</a>.</p>
-                                <form>
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="name"
-                                                    placeholder="Your Name">
-                                                <label for="name">Your Name</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="email"
-                                                    placeholder="Your Email">
-                                                <label for="email">Your Email</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="subject"
-                                                    placeholder="Subject">
-                                                <label for="subject">Subject</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control" placeholder="Leave a message here"
-                                                    id="message" style="height: 150px"></textarea>
-                                                <label for="message">Message</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 text-center">
-                                            <button class="btn btn-primary-gradient rounded-pill py-3 px-5"
-                                                type="submit">Send Message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- Contact End -->
-
-            <!-- Footer Start -->
-            <footer class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
-                <div class="container py-5 px-lg-5">
-                    <div class="row g-4">
-
-                        <!-- BRAND / KONTAK -->
-                        <div class="col-md-6 col-lg-3">
-                            <h4 class="text-white mb-3">BikininWeb</h4>
-                            <p class="mb-2">
-                                <i class="fa fa-map-marker-alt me-2"></i>Indonesia
-                            </p>
-                            <p class="mb-2">
-                                <i class="fa fa-phone-alt me-2"></i>+62 858-5051-3486
-                            </p>
-                            <p class="mb-3">
-                                <i class="fa fa-envelope me-2"></i>bikininweb@gmail.com
-                            </p>
-                            <div class="d-flex align-items-center">
-                                <!-- TikTok -->
-                                <a class="btn btn-outline-light btn-social me-2" href="https://www.tiktok.com/@bikininweb"
-                                    aria-label="TikTok">
-                                    <i class="fa-brands fa-tiktok"></i>
-                                </a>
-
-                                <!-- WhatsApp -->
-                                <a class="btn btn-outline-light btn-social me-2" href="https://wa.me/6285850513486"
-                                    aria-label="WhatsApp">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-
-                                <!-- Twitter / X -->
-                                <a class="btn btn-outline-light btn-social" href="https://x.com/xixixi127482"
-                                    aria-label="Twitter">
-                                    <i class="fa-brands fa-x-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- MENU -->
-                        <div class="col-md-6 col-lg-3">
-                            <h4 class="text-white mb-3">Menu</h4>
-                            <a class="btn btn-link text-light p-0 mb-2 d-block" href="#about">Tentang Kami</a>
-                            <a class="btn btn-link text-light p-0 mb-2 d-block" href="#feature">Layanan</a>
-                            <a class="btn btn-link text-light p-0 mb-2 d-block" href="#portfolio">Portofolio</a>
-                            <a class="btn btn-link text-light p-0 d-block" href="#pricing">Harga</a>
-                        </div>
-
-                        <!-- LAYANAN -->
-                        <div class="col-md-6 col-lg-3">
-                            <h4 class="text-white mb-3">Layanan</h4>
-                            <p class="mb-1">Website UMKM</p>
-                            <p class="mb-1">Undangan Digital</p>
-                            <p class="mb-1">Landing Page</p>
-                            <p class="mb-1">Dashboard Admin</p>
-                            <p class="mb-1">Website Personal</p>
-                            <p class="mb-1">Website Profesional</p>
-                        </div>
-
-                        <!-- CTA -->
-                        <div class="col-md-6 col-lg-3">
-                            <h4 class="text-white mb-3">Konsultasi</h4>
-                            <p class="small mb-3">
-                                Mau website profesional dan siap pakai?
-                                Konsultasi gratis sekarang.
-                            </p>
-                            <a href="https://wa.me/6285850513486" class="btn btn-light rounded-pill px-4"
-                                target="_blank" rel="noopener">
-                                Hubungi WhatsApp
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- COPYRIGHT -->
-                <div class="container px-lg-5">
-                    <div class="border-top pt-3 mt-3">
-                        <div class="row align-items-center">
-                            <div class="col-md-6 text-center text-md-start small">
-                                &copy; 2026 <strong>BikininWeb</strong>. All Rights Reserved.
-                            </div>
-                            <div class="col-md-6 text-center text-md-end small">
-                                Dibuat dengan ❤️ 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer End -->
-
-
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
         </div>
+    </header>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <div style="height:90px"></div>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+    <!-- HERO -->
+    <section id="home" class="wow animate__animated animate__fadeInUp"
+        style="text-align:center;background:radial-gradient(circle at top,#1f1147,#0f0f14); overflow:hidden;">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+        <div class="container">
+            <h1 style="font-size:54px;font-weight:800">
+                Jasa Pembuatan <span style="color:#a78bfa">Website</span><br>
+                Profesional, Cepat & Terjangkau
+            </h1>
+            <p style="max-width:820px;margin:25px auto 45px;color:var(--muted);line-height:1.8;font-size:18px">
+                Website modern, cepat, SEO-friendly, dan siap terhubung WhatsApp untuk membantu bisnis kamu closing
+                lebih cepat.
+            </p>
+            <a href="#order" class="btn glow">Konsultasi Gratis Sekarang</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="wow animate__animated animate__fadeInUp" style="background:#0f0f14">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:60px; color:#fff; font-size:36px; font-weight:800">
+                Layanan Kami
+            </h2>
+
+            <div class="grid grid-3" style="margin-top:20px; gap:30px">
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                    <i class="fas fa-building"></i>
+                    <h3 style="color:#a78bfa; margin-bottom:10px">Company Profile</h3>
+                    <p style="color:#ccc; line-height:1.6;">Website profesional untuk UMKM & bisnis yang ingin tampil
+                        meyakinkan di dunia digital.</p>
+                </div>
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3 style="color:#a78bfa; margin-bottom:10px">Landing Page</h3>
+                    <p style="color:#ccc; line-height:1.6;">Landing page fokus konversi, ideal untuk promosi produk atau
+                        kampanye bisnis singkat.</p>
+                </div>
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                    <i class="fas fa-store"></i>
+                    <h3 style="color:#a78bfa; margin-bottom:10px">Toko Online</h3>
+                    <p style="color:#ccc; line-height:1.6;">Website e-commerce lengkap, siap jualan dengan fitur payment
+                        gateway dan integrasi WhatsApp.</p>
+                </div>
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                    <i class="fas fa-briefcase"></i>
+                    <h3 style="color:#a78bfa; margin-bottom:10px">Portofolio</h3>
+                    <p style="color:#ccc; line-height:1.6;">Tampilkan karya, project, atau layanan profesionalmu secara
+                        menarik dan interaktif.</p>
+                </div>
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                    <i class="fas fa-cogs"></i>
+                    <h3 style="color:#a78bfa; margin-bottom:10px">Custom Website</h3>
+                    <p style="color:#ccc; line-height:1.6;">Solusi website sesuai kebutuhan khususmu, dengan desain dan
+                        fitur sesuai bisnis atau brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="wow animate__animated animate__fadeInUp" style="background:#0f0f14;">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:60px; font-size:36px; font-weight:800;">
+                Portofolio Website
+            </h2>
+
+            <div class="grid grid-3">
+
+                <!-- Joglo Manis -->
+                <div class="portfolio-card">
+
+                    <!-- Slider -->
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="img/joglo1.jpg" alt="Website Restoran Joglo Manis - Tampilan Home">
+                            <img src="img/joglo2.jpg" alt="Website Restoran Joglo Manis - Menu Digital">
+                            <img src="img/joglo3.jpg" alt="Website Restoran Joglo Manis - Keranjang Belanja">
+                            <img src="img/joglo4.jpg" alt="Website Restoran Joglo Manis - Checkout WhatsApp">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <span class="project-tag">Website Restoran</span>
+
+                        <h3>Joglo Manis</h3>
+
+                        <p>
+                            Website restoran modern dengan sistem pemesanan otomatis ke WhatsApp,
+                            filter kategori menu, kontrol jumlah pesanan, dan integrasi Google Maps.
+                            Dirancang untuk meningkatkan konversi dan mempermudah pelanggan memesan.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="portofolio/laundry/index.html" target="_blank" class="btn-primary">
+                            Visit Website
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- CleanGo Laundry Website -->
+                <div class="portfolio-card">
+
+                    <!-- Slider -->
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="https://laundrycities.com/wp-content/uploads/2022/12/Sorting-Laundry-Process-1280x720.jpg"
+                                alt="Website Laundry - Hero Section">
+                            <img src="https://www.ultim8cleaning.com/wp-content/uploads/2021/03/work-in-laundry-scaled.jpg"
+                                alt="Website Laundry - Layanan">
+                            <img src="https://laundry8plm.b-cdn.net/wp-content/uploads/2023/02/apa-itu-laundry.jpg"
+                                alt="Website Laundry - Kalkulator Harga">
+                            <img src="https://tse2.mm.bing.net/th/id/OIP.MdL31gwwJySrbGDiW6IdgAHaEC?pid=Api&P=0&h=180"
+                                alt="Website Laundry - Tracking Order">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <span class="project-tag">Website Laundry</span>
+
+                        <h3>CleanGo Laundry</h3>
+
+                        <p>
+                            Website laundry modern dengan desain clean dan user-friendly.
+                            Dilengkapi fitur kalkulator estimasi harga, tracking status cucian,
+                            serta integrasi pemesanan langsung ke WhatsApp.
+                            Dirancang untuk meningkatkan kepercayaan dan kemudahan pelanggan.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="portofolio/laundry/index.html" target="_blank" class="btn-primary">
+                            Visit Website
+                        </a>
+
+                    </div>
+                </div>
+                <!-- UrbanStyle Store -->
+                <div class="portfolio-card">
+
+                    <!-- Slider -->
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="img/fashion1.jpg" alt="UrbanStyle Store - Homepage">
+                            <img src="img/fashion2.jpg" alt="UrbanStyle Store - Product Catalog">
+                            <img src="img/fashion3.jpg" alt="UrbanStyle Store - Shopping Cart">
+                            <img src="img/fashion4.jpg" alt="UrbanStyle Store - Admin Dashboard">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-content">
+
+                        <span class="project-tag">Website E-Commerce</span>
+
+                        <h3>UrbanStyle Store</h3>
+
+                        <p>
+                            Website toko online fashion dengan sistem manajemen produk,
+                            keranjang belanja, checkout otomatis ke WhatsApp,
+                            serta dashboard admin untuk monitoring penjualan dan laporan.
+                            Cocok untuk UMKM yang ingin naik level ke digital.
+                        </p>
+
+                        <div class="tech-stack">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Firebase</span>
+                        </div>
+
+                        <a href="#" target="_blank" class="btn-primary">
+                            Visit Website
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="wow animate__animated animate__fadeInUp" style="background:#0b0b11">
+        <div class="container">
+            <h2 style="text-align:center; color:#fff; margin-bottom:50px;">Paket Harga</h2>
+            <div class="grid grid-3" style="gap:30px">
+
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s"
+                    style="text-align:center;">
+                    <h3 style="color:#fff">Paket Starter</h3>
+                    <h2 style="color:#a78bfa">Rp 750.000</h2>
+                    <p style="color:#ccc">Landing page 1 halaman, Desain mobile friendly, Form WhatsApp, SSL (https),
+                        Domain auto genereted, Hosting shared 3 bulan, Revisi Minor 1x</p>
+                </div>
+
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s"
+                    style="text-align:center; border:2px solid #a78bfa; position: relative; padding-top: 40px;">
+
+                    <!-- Logo Best Seller -->
+                    <div
+                        style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #facc15; color: #000; font-weight: bold; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
+                        BEST SELLER
+                    </div>
+
+                    <h3 style="color:#fff">Paket Basic</h3>
+                    <h2 style="color:#a78bfa">Rp 1.250.000</h2>
+                    <p style="color:#ccc">Website 3 halaman (Home, Profil, Kontak), Desain custom sederhana, Mobile
+                        friendly, Form WhatsApp, SSL (https), Domain auto genereted, Hosting shared 1 Bulan, Revisi
+                        Minor 2x</p>
+                </div>
+
+
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s"
+                    style="text-align:center;">
+                    <h3 style="color:#fff">Paket Standart</h3>
+                    <h2 style="color:#a78bfa">Rp 2.500.000</h2>
+                    <p style="color:#ccc">Landing page 1-6 halaman, Desain sesuai brand, Form pelanggan → database, Auto
+                        kirim WhatsApp, SEO dasar, SSL (https), Domain .id, Hosting shared 3 Bulan, Revisi Minor 3x,
+                        Dashboard admin sederhana</p>
+                </div>
+
+                <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s"
+                    style="text-align:center;">
+                    <h3 style="color:#fff">Paket Profesional</h3>
+                    <h2 style="color:#a78bfa">Rp 3.750.000</h2>
+                    <p style="color:#ccc">Landing page promo 1-10 halaman, Sistem order, Dashboard admin & laporan, SEO
+                        dasar, Optimasi kecepatan, SSL (https), Domain .com / .id, Hosting shared 6 Bulan, Revisi Minor
+                        5x</p>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="wow animate__animated animate__fadeInUp"
+        style="padding:60px 0; background-color:#1f1f2e; color:#ccc;">
+        <div class="container" style="max-width:1200px; margin:0 auto;">
+
+            <!-- Judul -->
+            <h2 style="text-align:center; font-size:2.5rem; color:#fff; margin-bottom:40px;">Tentang BikininWebsite</h2>
+            <p style="text-align:center; font-size:1.1rem; line-height:1.8; max-width:800px; margin:0 auto;">
+                Jasa pembuatan website profesional untuk UMKM, freelancer, startup, dan personal brand. Setiap proyek
+                kami kerjakan menggunakan <strong>PHP Native & Framework Laravel</strong>, tanpa WordPress, memastikan
+                performa maksimal, keamanan, dan fleksibilitas pengembangan jangka panjang.
+            </p>
+
+            <!-- Grid Keunggulan -->
+            <h2 style="text-align:center; font-size:2rem; color:#a78bfa; margin:50px 0 30px;">Kenapa Harus Kami?</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px;">
+
+                <!-- Keunggulan 1 -->
+                <div style="background:#2a2a3b; padding:20px; border-radius:10px; text-align:left;">
+                    <h3 style="color:#a78bfa; margin-bottom:10px;">Keunggulan</h3>
+                    <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+                        <li>✔ <strong>Source code full milik klien</strong></li>
+                        <li>✔ <strong>Tidak pakai sistem bajakan</strong></li>
+                        <li>✔ <strong>Pengerjaan pakai PHP Native & Laravel</strong></li>
+                        <li>✔ <strong>Bisa dikembangkan jangka panjang</strong></li>
+                        <li>✔ <strong>Cocok untuk UMKM & bisnis berkembang</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Estimasi Pengerjaan -->
+                <div style="background:#2a2a3b; padding:20px; border-radius:10px; text-align:left;">
+                    <h3 style="color:#a78bfa; margin-bottom:10px;">Estimasi Pengerjaan</h3>
+                    <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+                        <li>• Starter: 3–5 hari</li>
+                        <li>• Basic: 5–7 hari</li>
+                        <li>• Standard: 7–14 hari</li>
+                        <li>• Pro: 14–21 hari</li>
+                    </ul>
+                </div>
+
+                <!-- Paket & Fitur Bonus -->
+                <div style="background:#2a2a3b; padding:20px; border-radius:10px; text-align:left;">
+                    <h3 style="color:#a78bfa; margin-bottom:10px;">Semua Paket Termasuk</h3>
+                    <ul style="list-style:none; padding:0; margin:0; line-height:1.8;">
+                        <li>✔ Edukasi SEO</li>
+                        <li>✔ Dokumentasi Sistem</li>
+                        <li>✔ Panduan Penggunaan Sistem</li>
+                        <li>✔ Full Source Code via GitHub</li>
+                        <li>✔ Garansi Maintenance 3 Bulan</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ORDER FORM -->
+    <section id="order" class="wow animate__animated animate__fadeInUp" style="background:#0b0b11">
+        <div class="container">
+            <h2 style="text-align:center">Konsultasi & Order Website</h2>
+            <form onsubmit="sendToWhatsApp(); return false;" class="grid grid-3" style="margin-top:40px">
+                <input id="nama" type="text" placeholder="Nama Lengkap" required>
+                <input id="wa" type="tel" placeholder="Nomor WhatsApp Aktif" required>
+                <select id="jenis" required>
+                    <option value="">Pilih Jenis Website</option>
+                    <option>Landing Page</option>
+                    <option>Company Profile</option>
+                    <option>Toko Online</option>
+                    <option>Portofolio</option>
+                    <option>Custom Website</option>
+                </select>
+                <textarea id="kebutuhan" placeholder="Ceritakan kebutuhan website kamu"
+                    style="grid-column:1/-1"></textarea>
+                <button type="submit" class="btn glow" style="grid-column:1/-1">Kirim & Chat via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 BikininWebsite. All rights reserved.
+    </footer>
+
+    <!-- WA FLOAT -->
+    <a href="https://wa.me/6285850513486" class="wa-float" aria-label="Chat WhatsApp" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+            style="width:32px;height:32px;">
+    </a>
+
+    <script>
+        function sendToWhatsApp() {
+            const nama = document.getElementById("nama").value;
+            const wa = document.getElementById("wa").value;
+            const jenis = document.getElementById("jenis").value;
+            const kebutuhan = document.getElementById("kebutuhan").value;
+
+            const msg = `Halo admin, saya mau bikin website.\n\nNama: ${nama}\nNomor WhatsApp: ${wa}\nJenis Website: ${jenis}\n\nKebutuhan:\n${kebutuhan}\n\nMohon info estimasi harga & proses selanjutnya. Terima kasih.`;
+            const phone = "6285850513486";
+            const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+            window.open(url, "_blank");
+        }
+    </script>
+    <script>
+        const slides = document.querySelector(".slides");
+        let index = 0;
+
+        setInterval(() => {
+            index++;
+            if (index > 3) index = 0;
+            slides.style.transform = "translateX(-" + (index * 100) + "%)";
+        }, 3000);
+    </script>
+    <script>
+        document.querySelectorAll(".slider").forEach(slider => {
+            const slides = slider.querySelector(".slides");
+            const totalSlides = slides.children.length;
+            let index = 0;
+
+            setInterval(() => {
+                index = (index + 1) % totalSlides;
+                slides.style.transform = `translateX(-${index * 100}%)`;
+            }, 2500);
+        });
+    </script>
+
 </body>
 
 </html>
